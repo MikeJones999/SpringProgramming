@@ -2,17 +2,14 @@ package com.fockers.springtest;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.context.support.FileSystemXmlApplicationContext;
+//import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 
 public class App {
 
 	public static void main(String[] args) {
 
-//		Person person = new Person();
-//		person.speak();
-		
-		
+	
 		//class to instantiate bean objects
 		ApplicationContext context;
 		context = new ClassPathXmlApplicationContext("com/fockers/springtest/beans/Beans.xml");
@@ -24,10 +21,12 @@ public class App {
 		personSpring.speak();
 		
 		
-		System.out.println("****Closing FileSystemXML*****");
+		System.out.println("****Closing ClassPathXmlApplicationContext*****");
 		//used to close down the connection + stop resource leaks
 		//((FileSystemXmlApplicationContext)context).close();
+		((ClassPathXmlApplicationContext)context).close();
 		
+		System.out.println(personSpring);
 		
 	}
 

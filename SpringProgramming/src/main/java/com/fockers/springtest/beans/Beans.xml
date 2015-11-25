@@ -8,7 +8,16 @@
 		<constructor-arg value="111" index="0" name="id"></constructor-arg>
 		<constructor-arg value="mike" index="1" name="name"></constructor-arg>
 		<property name="gamerId" value="123">
-	
+
 		</property>
+		<property name="address" ref="address"></property>
 	</bean>
+
+
+	<bean id="address" class="com.fockers.springtest.Address">		
+	<constructor-arg name="street" value="26 hillmead"></constructor-arg>
+	<constructor-arg name="postcode" value="RH118RR"></constructor-arg>
+	</bean>
+
+
 </beans>

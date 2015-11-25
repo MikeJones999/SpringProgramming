@@ -5,8 +5,14 @@ public class Person {
 	private int id;
 	private String name;
 	private int gamerId;
+	private Address address;
+
+	
 
 
+	public void setAddress(Address address) {
+		this.address = address;
+	}
 
 
 	public Person(int id, String name) {
@@ -24,14 +30,17 @@ public class Person {
 	{
 			System.out.println("hello i am a person");
 	}
-	
-	
-	
-	
+
+
 	@Override
 	public String toString() {
-		return "Person [id=" + id + ", name=" + name + ", gamerId=" + gamerId + "]";
+		return "Person [id=" + id + ", name=" + name + ", gamerId=" + gamerId + ", address=" + address + "]";
 	}
+	
+	
+	
+	
+
 	
 	
 }

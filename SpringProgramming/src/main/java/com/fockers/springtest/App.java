@@ -19,7 +19,10 @@ public class App {
 		Person personSpring = (Person)context.getBean("person");
 		
 		personSpring.speak();
+//		Address address = (Address) context.getBean("address");
+//		System.out.println(address);
 		
+		Person person2 = (Person) context.getBean("person");
 		
 		System.out.println("****Closing ClassPathXmlApplicationContext*****");
 		//used to close down the connection + stop resource leaks
@@ -27,7 +30,7 @@ public class App {
 		((ClassPathXmlApplicationContext)context).close();
 		
 		System.out.println(personSpring);
-		
+		System.out.println(person2);
 	}
 
 }

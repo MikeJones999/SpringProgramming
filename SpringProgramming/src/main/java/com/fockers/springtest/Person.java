@@ -4,14 +4,21 @@ public class Person {
 
 	private int id;
 	private String name;
+	private int gamerId;
+
+
 
 
 	public Person(int id, String name) {
 
 		this.id = id;
 		this.name = name;
+	}	
+	
+	
+	public void setGamerId(int gamerId) {
+		this.gamerId = gamerId;
 	}
-
 
 	public void speak()
 	{
@@ -19,9 +26,11 @@ public class Person {
 	}
 	
 	
+	
+	
 	@Override
 	public String toString() {
-		return "Person [id=" + id + ", name=" + name + "]";
+		return "Person [id=" + id + ", name=" + name + ", gamerId=" + gamerId + "]";
 	}
 	
 	

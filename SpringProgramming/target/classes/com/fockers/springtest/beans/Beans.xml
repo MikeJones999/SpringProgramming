@@ -4,7 +4,8 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-	<bean id="person" class="com.fockers.springtest.Person">
+	<bean id="person" class="com.fockers.springtest.Person"
+		scope="prototype">
 		<constructor-arg value="111" index="0" name="id"></constructor-arg>
 		<constructor-arg value="mike" index="1" name="name"></constructor-arg>
 		<property name="gamerId" value="123">
@@ -14,7 +15,8 @@
 	</bean>
 
 
-	<bean id="address" class="com.fockers.springtest.Address">		
+	<bean id="address" class="com.fockers.springtest.Address"	
+	scope="singleton">	
 	<constructor-arg name="street" value="26 hillmead"></constructor-arg>
 	<constructor-arg name="postcode" value="RH118RR"></constructor-arg>
 	</bean>

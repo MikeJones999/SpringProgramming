@@ -16,20 +16,22 @@ public class App {
 		//no need to put path to bean.xml as it is in main project directory
 //		context = new FileSystemXmlApplicationContext("src/main/java/com/fockers/springtest/beans/Beans.xml");
 		
-		Person personSpring = (Person)context.getBean("person");
+		Person person1 = (Person)context.getBean("person");
 		
-		personSpring.speak();
+		person1.speak();
 //		Address address = (Address) context.getBean("address");
 //		System.out.println(address);
 		
 		Person person2 = (Person) context.getBean("person");
+		person1.setGamerId(666);
+		person1.setAddress(new Address("19 yr aran", "sa2 7px"));
 		
 		System.out.println("****Closing ClassPathXmlApplicationContext*****");
 		//used to close down the connection + stop resource leaks
 		//((FileSystemXmlApplicationContext)context).close();
 		((ClassPathXmlApplicationContext)context).close();
 		
-		System.out.println(personSpring);
+		System.out.println(person1);
 		System.out.println(person2);
 	}
 

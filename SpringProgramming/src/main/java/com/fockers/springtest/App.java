@@ -24,6 +24,8 @@ public class App {
 		
 		Person person2 = (Person) context.getBean("person");
 		person1.setGamerId(666);
+		person2.setGamerId(111);//bean set to singleton - only one bean type - therefore last variable changed will 
+		//change all beans.
 		person1.setAddress(new Address("19 yr aran", "sa2 7px"));
 		
 		System.out.println("****Closing ClassPathXmlApplicationContext*****");

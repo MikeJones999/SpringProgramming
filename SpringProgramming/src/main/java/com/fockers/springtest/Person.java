@@ -31,7 +31,21 @@ public class Person {
 			System.out.println("hello i am a person");
 	}
 
-
+	//method called by bean upon creation using init - name doesnt matter
+	//shows in bean.xml - <init-method="initMethod">
+	public void initMethod()
+	{
+		System.out.println("Bean Person : " + name + " created");
+	}
+	
+	//only available when bean.xml set this bean to singleton - not prototype
+	public void onDestroyed()
+	{
+		System.out.println("Bean Person : " + name + " destroyed");
+	}
+	
+	
+	
 	@Override
 	public String toString() {
 		return "Person [id=" + id + ", name=" + name + ", gamerId=" + gamerId + ", address=" + address + "]";

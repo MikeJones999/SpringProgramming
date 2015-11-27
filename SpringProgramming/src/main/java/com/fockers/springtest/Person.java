@@ -14,12 +14,24 @@ public class Person {
 		this.address = address;
 	}
 
+	public Person()
+	{
+		
+	}
 
 	public Person(int id, String name) {
 
 		this.id = id;
 		this.name = name;
+		System.out.println("Created Person: " + this);
 	}	
+	
+	//bean factory method
+	public static Person getInstance(int id,  String name)
+	{
+		System.out.println("Factory method created Person");
+		return new Person(id, name);
+	}
 	
 	
 	public void setGamerId(int gamerId) {
@@ -31,6 +43,11 @@ public class Person {
 			System.out.println("hello i am a person");
 	}
 
+	public void speak(String str)
+	{
+			System.out.println(str);
+	}
+	
 	//method called by bean upon creation using init - name doesnt matter
 	//shows in bean.xml - <init-method="initMethod">
 	public void initMethod()

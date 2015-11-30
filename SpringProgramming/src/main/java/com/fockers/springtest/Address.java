@@ -6,7 +6,10 @@ public class Address {
 	private String postcode;
 	
 	
-	
+	public Address()
+	{
+		
+	}
 	
 	public Address(String street, String postcode) {
 
@@ -18,6 +21,15 @@ public class Address {
 	@Override
 	public String toString() {
 		return "Address [address=" + street + ", postcode=" + postcode + "]";
+	}
+	
+
+	public void setStreet(String street) {
+		this.street = street;
+	}
+
+	public void setPostcode(String postcode) {
+		this.postcode = postcode;
 	}
 	
 	

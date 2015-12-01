@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
 	xmlns:util="http://www.springframework.org/schema/util"
-
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
@@ -58,4 +58,29 @@
 	</bean>
 
 
+
+
+
+	<bean id="jungle" class="jungle.Jungle">
+		<property name="largets" ref="bear"></property>
+		<property name="animals">
+			<list>
+				<ref bean="lion" />
+				<ref bean="snake" />
+				<ref bean="bear" />
+			</list>
+		</property>
+	</bean>
+	<bean id="lion" class="jungle.Animal">
+		<property name="name" value="Lenny"></property>
+		<property name="type" value="Lion"></property>
+	</bean>
+	<bean id="bear" class="jungle.Animal">
+		<property name="name" value="Barney"></property>
+		<property name="type" value="Bear"></property>
+	</bean>
+	<bean id="snake" class="jungle.Animal">
+		<property name="name" value="Sid"></property>
+		<property name="type" value="Snake"></property>
+	</bean>
 </beans>

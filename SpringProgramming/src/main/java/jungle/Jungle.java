@@ -1,5 +1,6 @@
 package jungle;
 
+import java.util.Collections;
 import java.util.List;
 
 public class Jungle {
@@ -36,11 +37,18 @@ public class Jungle {
 			sb.append("\n");
 		}
 		
+		sortLargest();
 		sb.append("Largest Animal: " + largest.getType());
 		
 		return sb.toString();
 	}
+
 	
+	public void sortLargest()
+	{
+	    Collections.sort(animals);
+	    largest = animals.get(0);
+	}
 	
 	
 }

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
 	xmlns:util="http://www.springframework.org/schema/util"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
@@ -38,7 +37,7 @@
 	<bean id="personFactory" class="com.fockers.springtest.PersonFactory">
 	</bean>
 
-
+	<!-- FUIT BASKET AND FRUIT -->
 
 	<bean id="basket" class="fruitTest.FruitBasket">
 
@@ -59,28 +58,40 @@
 
 
 
-
+	<!-- ANIMALS AND JUNGLE -->
 
 	<bean id="jungle" class="jungle.Jungle">
-		<property name="largets" ref="bear"></property>
 		<property name="animals">
 			<list>
 				<ref bean="lion" />
 				<ref bean="snake" />
 				<ref bean="bear" />
+				<ref bean="panda" />
 			</list>
 		</property>
 	</bean>
 	<bean id="lion" class="jungle.Animal">
 		<property name="name" value="Lenny"></property>
 		<property name="type" value="Lion"></property>
+		<property name="size" value="40.5"></property>
 	</bean>
 	<bean id="bear" class="jungle.Animal">
 		<property name="name" value="Barney"></property>
 		<property name="type" value="Bear"></property>
+		<property name="size" value="30.0"></property>
+
 	</bean>
 	<bean id="snake" class="jungle.Animal">
 		<property name="name" value="Sid"></property>
 		<property name="type" value="Snake"></property>
+		<property name="size" value="2.0"></property>
+
 	</bean>
+	<bean id="panda" class="jungle.Animal">
+		<property name="name" value="paul"></property>
+		<property name="type" value="Panda"></property>
+		<property name="size" value="13.5"></property>
+
+	</bean>
+
 </beans>

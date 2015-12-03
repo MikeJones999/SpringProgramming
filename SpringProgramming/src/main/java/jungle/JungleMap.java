@@ -8,8 +8,12 @@ import java.util.Map;
 public class JungleMap {
 	private Animal largest;
 	private Map<String, String> foods = new HashMap<String, String>();
+	private Map<String,Animal> animals = new HashMap<String, Animal>();
 	
 	
+	public void setAnimals(Map<String, Animal> animals) {
+		this.animals = animals;
+	}
 	public Map<String, String> getFoods() {
 		return foods;
 	}
@@ -17,8 +21,6 @@ public class JungleMap {
 		this.foods = foods;
 	}
 
-
-	private List<Animal> animals;
 	
 	public Animal getLargets() {
 		return largest;
@@ -26,12 +28,7 @@ public class JungleMap {
 	public void setLargets(Animal largest) {
 		this.largest = largest;
 	}
-	public List<Animal> getAnimals() {
-		return animals;
-	}
-	public void setAnimals(List<Animal> animals) {
-		this.animals = animals;
-	}
+
 	
 	@Override
 	public String toString()
@@ -42,14 +39,24 @@ public class JungleMap {
 		{
 			sb.append(entry.getKey() + " : " + entry.getValue() + "\n");
 		}
+		
+		sb.append("\n");
+		
+		for(Map.Entry<String, Animal> animal: animals.entrySet())
+		{
+			sb.append(animal.getKey() + " : " + animal.getValue() + "\n");
+		}
+		
+		
+		
 		return sb.toString();
 		
 	}
 
 	
-	public void sortLargest()
-	{
-	    Collections.sort(animals);
-	    largest = animals.get(0);
-	}
+//	public void sortLargest()
+//	{
+//	    Collections.sort(animals);
+//	    largest = animals.get(0);
+//	}
 }

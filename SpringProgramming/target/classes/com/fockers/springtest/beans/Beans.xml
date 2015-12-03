@@ -106,6 +106,14 @@
 				<prop key="Zebra">grass</prop>
 			</props>
 		</property>
+		<property name="animals">
+			<map>
+				
+			<entry key="lion" value-ref="lion"></entry>
+			<entry key="bear" value-ref="bear"></entry>
+			<entry key="panda" value-ref="panda"></entry>
+			</map>
+		</property>
 	</bean>
 
 

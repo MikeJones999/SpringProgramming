@@ -24,7 +24,15 @@ public class Animal implements Comparable<Animal>{
 	public void setSize(Double size) {
 		this.size = size;
 	}
+	
 
+	
+
+	@Override
+	public String toString() 
+	{
+		return "Animal [name=" + name + ", type=" + type + ", size=" + size + "]";
+	}
 	public int compareTo(Animal arg0) {
 
 		if (this.getSize() <= arg0.getSize())

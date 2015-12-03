@@ -94,4 +94,20 @@
 
 	</bean>
 
+	<!-- JungleBean 2 Map insertion-->
+
+
+	<bean id="jungleMap" class="jungle.JungleMap">
+		<property name="foods">
+			<props>
+				<prop key="Gorilla">banana</prop>
+				<prop key="Lion">buffalo</prop>
+				<prop key="Bear">honey</prop>
+				<prop key="Zebra">grass</prop>
+			</props>
+		</property>
+	</bean>
+
+
+
 </beans>

@@ -8,6 +8,7 @@
 	<enableImports><![CDATA[false]]></enableImports>
 	<configs>
 		<config>src/main/java/com/fockers/springtest/beans/Beans.xml</config>
+		<config>src/main/java/com/fockers/springtest/beans/Beans1.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>
